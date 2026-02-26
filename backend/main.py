@@ -22,7 +22,7 @@ app.add_middleware(
 )
 
 # ✅ Secure Groq API key (NO key in code)
-client = Groq(api_key=os.getenv("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"))
+# client = Groq(api_key=os.getenv("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"))
 
 
 # Home route
