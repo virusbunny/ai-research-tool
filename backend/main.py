@@ -7,12 +7,12 @@ import json
 import os
 from dotenv import load_dotenv
 
-# 🔥 Load environment variables
+# ✅ Load environment variables from .env
 load_dotenv()
 
 app = FastAPI()
 
-# ✅ Enable CORS (for React frontend)
+# ✅ Enable CORS for React frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # change in production if needed
@@ -21,7 +21,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 🔑 Secure API key from .env
+# ✅ Secure Groq API key (NO key in code)
 client = Groq(api_key=os.getenv("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"))
 
 
@@ -31,7 +31,7 @@ def home():
     return {"message": "AI Research Tool Backend Running"}
 
 
-# PDF text extraction
+# ✅ Extract text from PDF
 def extract_text_from_pdf(file_bytes):
     reader = PdfReader(io.BytesIO(file_bytes))
     text = ""

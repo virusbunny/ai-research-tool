@@ -1,0 +1,14 @@
+# Ignore environment files
+.env
+backend/.env
+
+# Ignore Python
+__pycache__/
+*.pyc
+venv/
+
+# Ignore node
+node_modules/
+
+# OS
+.DS_Store
